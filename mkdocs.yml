@@ -1,0 +1,42 @@
+site_name: Klinks Project Docs
+site_url: https://github.com/BrunoComitre/Klinks
+site_description: Project documentation with Markdown
+site_author: Bruno Alves Comitre
+
+repo_url: https://github.com/BrunoComitre/Klinks
+repo_name: BrunoComitre/Klinks
+edit_uri: tree/main/docs
+
+
+theme:
+  name: material
+  locale: en
+  language: en
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - python
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - User Guide:
+    - Guide: user-guide/guide.md
+  - Developer Guide:
+    - Links: dev-guide/links.md
+  - About:
+    - Release Notes: about/release-notes.md
+    - Contributing: about/contributing.md
+    - License: about/license.md
+
+# exclude_docs:
+#   drafts/
+#   /requirements.txt
