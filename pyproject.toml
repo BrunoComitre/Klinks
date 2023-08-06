@@ -8,6 +8,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+flask = "^2.3.2"
+flask-wtf = "^1.1.1"
+flask-sqlalchemy = "^3.0.5"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -38,7 +41,7 @@ line_lenght = 79
 [tool.taskipy.tasks]
 lint = "blue --check --diff . && isort --check --diff ."
 docs = "mkdocs serve"
-run = "poetry run"
+run = "poetry run python app/main.py"
 pre_test = "task lint"
 test = "pytest -s -x --cov=Klinks -vv"
 post_test = "coverage html"
