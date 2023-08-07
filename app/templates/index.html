@@ -9,7 +9,7 @@
         <meta name="description" content="A quickly Link Project">
         <meta name="author" content="Bruno Alves Comitre">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="stylesheet" href=" {{ url_for('static/css', filename='style.css') }}">
+        <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css') }}">
         <!-- PyScript -->
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
         <!-- Bootstrap CSS -->
@@ -18,33 +18,51 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-6 mx-auto mt-5 text-center">
-                    
-                    <h1>Klinks - Quick Links Comitre's Database</h1>
 
-                    <div class="row justify-content-center mt-5">
-                        {{ form.csrf_token }}
-                        <div class="col-auto">
-                            <input type="text" class="form-control" id="linkInput">
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-success" id="button">Submit</button>
-                        </div>
+        <!-- Insert Links -->
+        <div class="container"></divclass>
+            <div class="row">              
+                <div class="row justify-content-center mt-5">
+                    {{ form.csrf_token }}
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="linkInput">
                     </div>
-
-                    <div class="row mt-5 text-center justify-content-center">
-                        <div class="col-6">
-                            <ul id="urls"></ul>
-                        </div>
+                    <div class="col-auto">
+                        <button class="btn btn-success" id="button">Submit</button>
+                    </div>
+                </div>
+                <div class="row mt-5 text-center justify-content-center">
+                    <div class="col-6">
+                        <ul id="urls"></ul>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Title -->
+        <div class="col-6 mx-auto mt-5 text-center">    
+            <h1>Klinks - Quick Links Database</h1>
+        </div>
+
+        <!-- Buttons -->
+        <div>
+            <button type="button" class="button-link" role="button">JOB</button>
+            <button type="button" class="button-link" role="button">BUG BOUNTY</button>
+            <button type="button" class="button-link" role="button">HACK</button>
+            <button type="button" class="button-link" role="button">ESCOLA</button>
+            <button type="button" class="button-link" role="button">CURSO</button>
+            <button type="button" class="button-link" role="button">ORGANIZAR</button>
+            <button type="button" class="button-link" role="button">EMPREGO</button>
+            <button type="button" class="button-link" role="button">F.I.R.E</button>
+        </div>
+
+        <!-- Table Links -->
+        <div>
+        </div>
+
+        <!-- Footer -->
         <footer class="footer bg-dark text-center text-white d-flex justify-content-between flex-wrap pb-0 " >
-                
+            
             <!-- Copyright -->
             <a class="text-white" href="https://mdbootstrap.com/"> © 2023 Copyright: Dribyam, Inc</a>
             <!-- Copyright -->
@@ -55,7 +73,7 @@
                 </i>
             </a>
             <!-- Logo -->
-                   
+ 
             <!-- Grid container -->
               <!-- Section: Social media -->
               <section class="mb-4">
@@ -76,5 +94,4 @@
         <py-script src="{{ url_for('static', filename='script.py') }}"></py-script>
 
     </body>
-
 </html>
