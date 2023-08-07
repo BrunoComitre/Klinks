@@ -16,7 +16,7 @@ class Links(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     page_title = db.Column(db.String(255),unique=True, nullable=False)
     link = db.Column(db.String(255),unique=True, nullable=False)
-    added_on_date = db.Column(db.Datetime, nullable=False, default=datetime.utcnow)
+    added_on_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
