@@ -1,8 +1,7 @@
-from crypt import methods
 import json
-import pyodide
+#import pyodide
 
-from pyodide.http import pyfetch
+#from pyodide.http import pyfetch
 
 async def make_request(url, method, body):
     csrf = document.getElementById('csrf_token').value
@@ -36,7 +35,7 @@ async def submit_form(e):
     else:
         link_input.classList = 'form-control is-valid'
 
-        ul = document.getElementById('cities')
+        ul = document.getElementById('urls')
         li = document.createElement('li') 
         li.innerHTML = response['name']
         ul.appendChild(li)

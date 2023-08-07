@@ -10,5 +10,7 @@ def name_validator(form, field):
         )
 
 
-class CityForm(FlaskForm):
+class LinkForm(FlaskForm):
     name = StringField('name', validators=[name_validator])
+    # page_title = StringField('name', validators=[name_validator])
+    # link = StringField('name', validators=[name_validator])
