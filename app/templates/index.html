@@ -18,34 +18,51 @@
     </head>
 
     <body>
-
         <!-- Insert Links -->
-        <div class="container"></divclass>
-            <div class="row">              
-                <div class="row justify-content-center mt-5">
-                    {{ form.csrf_token }}
-                    <div class="col-auto">
-                        <input type="text" class="form-control" id="linkInput">
-                    </div>
-                    <div class="col-auto">
-                        <button class="btn btn-success" id="button">Submit</button>
-                    </div>
+        <div class="row g-3">
+            {{ form.csrf_token }}
+            <form class="row g-3">
+                {{ form.csrf_token }}
+                <div class="col-4">
+                  <label for="inputText" class="visually-hidden">Name</label>
+                  <input type="text" class="form-control" id="namelinkInput" placeholder="Name Link" aria-label=".form-control-sm example">
                 </div>
-                <div class="row mt-5 text-center justify-content-center">
+                <div class="col-4">
+                    <label for="inputText" class="visually-hidden">Link</label>
+                    <input type="text" class="form-control" id="linkInput" placeholder="Link" aria-label=".form-control-sm example">
+                  </div>
+                  <div class="col-auto">
+                    <label for="inputText" class="visually-hidden">Tag</label>
+                    <input class="form-control" list="datalistOptions" id="enumlinkInput" placeholder="Adicione ao Grupo..." aria-label=".form-control-sm example">
+                    <datalist id="datalistOptions">
+                        <option value="JOB">
+                        <option value="BUG BOUNTY">
+                        <option value="HACK">
+                        <option value="ESCOLA">
+                        <option value="CURSO">
+                        <option value="ORGANIZAR">
+                        <option value="EMPREGO">
+                        <option value="F.I.R.E">
+                      </datalist>
+                </div>
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary mb-3" id="button">Submit</button>
+                </div>
+                <!-- <div class="row mt-5 text-center justify-content-center">
                     <div class="col-6">
                         <ul id="urls"></ul>
                     </div>
-                </div>
-            </div>
+                </div> -->
+              </form>
         </div>
 
         <!-- Title -->
-        <div class="col-6 mx-auto mt-5 text-center">    
+        <div class="col-6 mx-auto mt-5 text-center" style="height: 80px;">    
             <h1>Klinks - Quick Links Database</h1>
         </div>
 
         <!-- Buttons -->
-        <div>
+        <div class="justify-content-center col-6 mx-auto" style="height: 100px;">
             <button type="button" class="button-link" role="button">JOB</button>
             <button type="button" class="button-link" role="button">BUG BOUNTY</button>
             <button type="button" class="button-link" role="button">HACK</button>
@@ -57,7 +74,24 @@
         </div>
 
         <!-- Table Links -->
-        <div>
+        <div class="grid gap-3">
+            <ol class="list-group list-group-numbered">
+                <a href="#" class="list-group-item list-group-item-action active d-flex justify-content-between" aria-current="true">The current link item
+                    <small>3 days ago</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">A second link item
+                    <small>3 days ago</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">A third link item
+                    <small>3 days ago</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">A fourth link item
+                    <small>3 days ago</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">A disabled link item
+                    <small>3 days ago</small>
+                </a>
+              </ol>
         </div>
 
         <!-- Footer -->
