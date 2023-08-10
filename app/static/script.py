@@ -23,8 +23,11 @@ async def make_request(url, method, body):
 
 
 async def submit_form(e):
+    name_link_input = document.querySelector('#namelinkInput')
     link_input = document.querySelector('#linkInput')
-    link = link_input.value
+    enum_link_input = document.querySelector('#enumlinkInput')
+
+    link = [name_link_input.value, link_input.value, enum_link_input.value ]
 
     body = json.dumps({'name': link})
 
